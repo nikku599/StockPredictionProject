@@ -87,3 +87,11 @@ y_pred_final=model.predict(X)
 plt.figure(figsize=(16,8))
 plt.plot(Y, label='Linear Regression plot')
 plt.plot(y_pred_final,color="red")
+
+#model accuracy
+from sklearn.metrics import r2_score
+print(r2_score(Y,y_pred_final))
+
+#model root mean error
+from sklearn.metrics import mean_squared_error
+print(mean_squared_error(Y, y_pred_final))
